@@ -3,59 +3,85 @@
     src: url("./fonts/VT323/VT323-Regular.ttf") format("truetype");
 }
 
-body {
-    font-family: "VT323", monospace;
-    background-image: url(./images/space-background.png);
-    color:rgb(75, 243, 226);
-   /* background-color:darkslateblue;*/
+@font-face {
+    font-family: 'Geo';
+    src: url("./fonts/Geo/Geo-Regular.ttf") format("truetype");
 }
 
-.logo, .logo-subtext {
-    text-align:center;
-    padding: 1.5%; /*2%*/
-    width: 70%; /*remove the if box or layout breaks*/
-    margin: 4% auto 0;
-    background-color: rgba(71, 61, 139, 0.65);
+body {
+	font-family: "Geo";
+    background-image: url(./images/space-background.png);
+    color:rgb(75, 243, 226);
+}
+
+body p, li{
+    font-family: "VT323", monospace;
 }
 
 .logo {
-    margin-bottom: 0;
-    letter-spacing: 7px;
-    border: 4px ridge turquoise; /*title + subtitle box*/
-    border-bottom: none;/*title + subtitle box*/
+	text-align:center;
+	padding: 1.5%;
+	width: 70%; /*remove the if box or layout breaks*/
+	margin: 4% auto 0;
+	background-color: rgba(138,43, 226, 0.65);
+    border: 12px ridge turquoise; /*title + subtitle box*/
 }
 
-.logo-subtext {
-    margin-top: 0;
-    margin-bottom: 5%;
-    font-size:larger;
-    letter-spacing: 4px;
-    border: 4px ridge turquoise;/*title + subtitle box*/
-    border-top: none;/*title + subtitle box*/
+.about-me {
+	text-align: center;
+	margin-bottom: 20px;
+	padding: 10px;
+	background-color: rgba(0, 0, 3, 0.799);
 }
 
+.projects {
+	border-top: 1px solid blueviolet;
+	margin-top: 20px;
+	background-color: rgba(0, 0, 3, 0.799);
+    text-align: center;
+}
+
+.projects ul {
+	display: flex;
+	flex-direction: column;
+}
+
+.projects li {
+	list-style-type: none;
+	margin-bottom: 6px;
+}
+
+.projects a {
+	text-decoration: none;
+	color: red;
+}
+
+.projects h2 {
+    text-align: center;
+}
+/* 
 .character-tabs-top, .character-tabs-bottom {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width:90%;
-    height: 148px; /*was: 300px*/
+    height: 148px; //was: 300px
     border: 4px ridge turquoise;
-    /* border-radius: 5px;*/
+    //border-radius: 5px;
     overflow:hidden;
     text-overflow: ellipsis;
     background-color: rgba(0, 0, 0, 0.85);
 }
 
 .character-tabs-top {
-    margin: 6% auto 0;/*was 6% auto*/
+    margin: 6% auto 0;//was 6% auto
     border-bottom: none;
 }
 
 .character-tabs-bottom {
     margin: 0 auto 6%;
     border-top: none;
-}
+} */
 
 .character-tabs-top li, 
 .character-tabs-bottom li {
@@ -97,18 +123,18 @@ a:hover {
 
 /*these social media things should probably be set to flex,
 but i'm taking care of the character tabs first*/
-#discord {
+#github {
     left: 0;
     bottom: 0;
     margin-left: 20%;
 }
 
-#facebook {
+#linkedin {
     left: 44%;
     bottom: 0;
 }
 
-#instagram {
+#cv-page {
     right: 0;
     bottom: 0;
     margin-right: 20%;
